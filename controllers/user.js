@@ -6,6 +6,7 @@ const User = require("../models/users");
 const registerController = async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });
+    console.log(user);
     if (user != null) {
       return res.send("username already taken.");
     } else {
@@ -23,9 +24,25 @@ const registerController = async (req, res) => {
 };
 
 //Login
-// check email exist or not
+// check username exist or not
 // if exist then check password is match with the corresponding email
 // if match login
+const loginController = async (req, res) => {
+  try {
+    const user = await User.findOne({ username: req.body.username });
+    if (user == null) {
+      return res.send("username not registered");
+    } else {
+      if (req.body.password != user.password) {
+        return res.send("password incorrect");
+      } else {
+        return res.send("login successfully");
+      }
+    }
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
 
 //get all users data
 const userList = (req, res) => {
@@ -34,4 +51,4 @@ const userList = (req, res) => {
   });
 };
 
-module.exports = { registerController, userList };
+module.exports = { registerController, loginController, userList };

@@ -19,7 +19,7 @@ Content-Type: application/json
 
 ### 
 
-DELETE http://localhost:3000/inv/632fd537526a894af1174c38
+DELETE http://localhost:3000/inv/63302767653ad017f94696e2
 
 ###
 
@@ -36,9 +36,20 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "username": "test2",
+    "username": "test4",
     "password": "afsadada"
 }
 
 ###
+
 GET http://localhost:3000/auth
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "test11",
+    "password": "afsadada"
+}
