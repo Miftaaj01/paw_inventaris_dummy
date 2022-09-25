@@ -1,14 +1,14 @@
 ### get all
 
-GET http://localhost:3000/inventaris 
+GET http://localhost:3000/inv
 
 ### get one
 
-GET http://localhost:3000/inventaris/632d497ff7ea7f445e31146b
+GET http://localhost:3000/inv/632d982ef12d3aa4f211dba7
 
 ###
 
-POST http://localhost:3000/inventaris
+POST http://localhost:3000/inv
 Content-Type: application/json
 
 {
@@ -19,13 +19,26 @@ Content-Type: application/json
 
 ### 
 
-DELETE http://localhost:3000/inventaris/632d3837f7ea7f445e311447
+DELETE http://localhost:3000/inv/632fd537526a894af1174c38
 
 ###
 
-PATCH http://localhost:3000/inventaris/632d497ff7ea7f445e31146b
+PATCH http://localhost:3000/inv/632ee673ea165aa8ff388fd3
 Content-Type: application/json
 
 {
     "title": "apalah"
 }
+
+###
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username": "test2",
+    "password": "afsadada"
+}
+
+###
+GET http://localhost:3000/auth
