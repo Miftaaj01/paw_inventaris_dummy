@@ -40,8 +40,8 @@ const getInventoryByIdController = async (req, res) => {
 //Create new inventory
 const postInventoryController = async (req, res) => {
   const inventory = new Inventory({
-    title: req.params.title,
-    user_id: req.params.user_id,
+    title: req.body.title,
+    user_id: req.body.user_id,
   });
   try {
     const newInventory = await inventory.save();
