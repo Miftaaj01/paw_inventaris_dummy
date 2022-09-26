@@ -9,8 +9,8 @@ const getInventoryController = async (req, res) => {
       // console.log(item);
       let isValid = true;
       for (key in filters) {
-        console.log(key, item.key, filters.key);
-        isValid = isValid && item.key == filter.key;
+        console.log(key, item[key], filters[key]);
+        isValid = isValid && item[key] == filters[key];
       }
       return isValid;
     });
@@ -55,11 +55,11 @@ const postInventoryController = async (req, res) => {
 const patchInventoryController = async (req, res) => {
   const data = {};
 
-  if (req.params.title != null) {
-    data.title = req.params.title;
+  if (req.body.title != null) {
+    data.title = req.body.title;
   }
-  if (req.params.user_id != null) {
-    data.user_id = req.params.user_id;
+  if (req.body.user_id != null) {
+    data.user_id = req.body.user_id;
   }
   // console.log(data);
 

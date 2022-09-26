@@ -6,7 +6,7 @@ const User = require("../models/users");
 const registerController = async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });
-    console.log(user);
+    // console.log(user);
     if (user != null) {
       return res.send("username already taken.");
     } else {

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const getInventory = require("../middleware/index");
+const { getInventory } = require("../middleware/index"); //middleware
 
 const {
   getInventoryController,

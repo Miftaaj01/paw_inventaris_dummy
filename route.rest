@@ -53,3 +53,20 @@ Content-Type: application/json
     "username": "test11",
     "password": "afsadada"
 }
+
+###
+
+GET http://localhost:3000/item
+
+###
+
+GET http://localhost:3000/item/
+
+###
+
+POST http://localhost:3000/item/
+Content-Type: application/json
+{
+    "name" : "Bola",
+    "qty": "1"
+}
