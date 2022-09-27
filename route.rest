@@ -4,7 +4,7 @@ GET http://localhost:3000/inv
 
 ### get one
 
-GET http://localhost:3000/inv/632d982ef12d3aa4f211dba7
+GET http://localhost:3000/inv/6331c48246cfb7eec94e4619
 
 ###
 
@@ -23,12 +23,14 @@ DELETE http://localhost:3000/inv/63302767653ad017f94696e2
 
 ###
 
-PATCH http://localhost:3000/inv/632ee673ea165aa8ff388fd3
+PATCH http://localhost:3000/inv/6331c48246cfb7eec94e4619
 Content-Type: application/json
 
 {
-    "title": "apalah"
+    "title": "Mobile Legends",
+    "user_id": "1"
 }
+
 
 ###
 
@@ -60,12 +62,13 @@ GET http://localhost:3000/item
 
 ###
 
-GET http://localhost:3000/item/
+GET http://localhost:3000/item?name:Blade Armor
 
 ###
 
 POST http://localhost:3000/item/
 Content-Type: application/json
+
 {
     "name" : "Bola",
     "qty": "1"

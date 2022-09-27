@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const { getInventory } = require("../middleware/index"); //middleware
 
 const {
   getInventoryController,
@@ -14,15 +13,15 @@ const {
 router.get("/", getInventoryController);
 
 //getting one by id
-router.get("/:id", getInventory, getInventoryByIdController);
+router.get("/:id", getInventoryByIdController);
 
 //creating one
 router.post("/", postInventoryController);
 
 //updating one
-router.patch("/:id", getInventory, patchInventoryController);
+router.patch("/:id", patchInventoryController);
 
 //deleting one
-router.delete("/:id", getInventory, deleteInventoryController);
+router.delete("/:id", deleteInventoryController);
 
 module.exports = router;

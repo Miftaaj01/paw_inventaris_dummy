@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const { checkItem } = require("../middleware/index");
 
 const {
   getAllItemController,
@@ -14,15 +13,15 @@ const {
 router.get("/", getAllItemController);
 
 //get items by id
-router.get("/:id", checkItem, getSingleItemController);
+router.get("/:id", getSingleItemController);
 
 //create new item
 router.post("/", postItemController);
 
 //update item
-router.patch("/:id", checkItem, patchItemController);
+router.patch("/:id", patchItemController);
 
 //delete item
-router.delete("/:id", checkItem, deleteItemController);
+router.delete("/:id", deleteItemController);
 
 module.exports = router;
