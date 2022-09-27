@@ -14,9 +14,9 @@ const itemSchema = new mongoose.Schema({
     type: Number,
   },
 
-  date: {
-    type: Date,
-  },
+  // date: {
+  //   type: Date,
+  // },
 
   inventory_id: {
     type: String,

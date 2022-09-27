@@ -7,7 +7,7 @@ const inventorySchema = new mongoose.Schema({
   },
 
   user_id: {
-    type: Number,
+    type: String,
     // required: true,
   },
 });
